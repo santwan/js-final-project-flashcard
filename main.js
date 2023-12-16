@@ -34,6 +34,7 @@ const flashcardsData = [
 const cardContainer = document.getElementById('card-container');
 const startButton = document.getElementById('start-button');
 const resetButton = document.getElementById('reset-button');
+const doneButton = document.getElementById('done-button')
 
 const handleStart = () => {
   flashcardsData.forEach((item) => {
@@ -51,10 +52,25 @@ const handleStart = () => {
     });
   });
 
-  resetButton.classList.remove('hidden');
+  doneButton.classList.remove('hidden');
   startButton.classList.add('hidden');
 };
 
+
+//Done Button function
+const handleDone = () => {
+  cardContainer.innerHTML = '';
+
+  // cardElement.addEventListener('click', () =>{
+
+  // })
+
+  resetButton.classList.remove('hidden')
+  doneButton.classList.add('hidden')
+}
+
+
+//Reset Button function
 const handleReset = () => {
   cardContainer.innerHTML = '';
 
